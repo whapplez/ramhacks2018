@@ -33,7 +33,17 @@ def main(org, post_date, raw, file=False):
             is_jj_cd = lambda pos: pos[:2] == 'JJ' or pos[:2] == 'CD'
             jj = [word for (word, pos) in pt if is_jj_cd(pos)]
             plausible = [a for a in jj if any(b in a for b in ['am', 'pm'])]
-            tf = plausible[0]
+            try:
+                tf = plausible[0]
+            except IndexError:
+                grammar = "NP: {<CD><NN|VBP>}"
+                cp = nltk.RegexpParser(grammar)
+                is_np = lambda pos: pos[:2] == 'NP'
+                for each in cp.parse(pt):
+                    if str(type(each)) == "<class 'nltk.tree.Tree'>":
+                        typ = each.pos()[0][-1]
+                        if typ == 'NP':
+                            tf = " ".join([tp[0] for tp in each.leaves()])
         # https://stackoverflow.com/questions/33587667/extracting-all-nouns-from-a-text-file-using-nltk
         # print(re.findall('\d+:+\d+', str(ss)))
         print(tf)
