@@ -25,7 +25,7 @@ app.set('port', process.env.PORT || 8080 );
 var spawn = require('child_process').spawn;
 
 app.get('/', function(req, res){
-	res.send("hello world")
+	res.send("hello")	
 });
 
 var arry2 = new Promise(function(resolve, reject){
@@ -48,6 +48,7 @@ var arry2 = new Promise(function(resolve, reject){
 	});
 });
 
+var haha = 0;
 arry2.then(function(fulfilled){
 	//console.log(fulfilled)
 	for(var i = 0; i < fulfilled.length; i++){
@@ -56,7 +57,7 @@ arry2.then(function(fulfilled){
 		py.stdout.on('data', function(data) { 
 	    	var xd = (data.toString("utf-8").split("\n"))
 	    	if(xd.length == 6){
-	    		var location = xd[4].slice(11);
+	    		var location = xd[4].slice(11); //THE LOCATION
 	    		googleMapsClient.places({
 	    			query: location,
 	    			language: 'en',
@@ -65,15 +66,31 @@ arry2.then(function(fulfilled){
 	    		}).asPromise().then(function(response){
 	    			if(response.json.results.length > 0){
 	    				xd[4] = (response.json.results[0].geometry.location)
-	    				locArray.push(xd);
-	    				console.log(locArray)
+					    var date = xd[3].slice(12,22);
+						var time = xd[3].slice(23,31);
+						var food = "beans";
+						var org = "CSA";
+	    				var geo = response.json.results[0].geometry.location.lat + ", " + response.json.results[0].geometry.location.lng; 
+	    				var ob = {
+	    					location: location,
+	    					date: date,
+	    					time: time,
+	    					food: food,
+	    					organization: org,
+	    					geopoint: geo
+	    				}
+	    				haha += 1;
+	    				fs.appendFile('myjsonfile.json', '{"index":{"_index":"freefood","_id":' + haha + '}}\n' + JSON.stringify(ob) + "\n", function(err){
+
+	    				});
 	    			}
 	    		});
 	    	}
 		});
 	}
+	fs.writeFile('myjsonfile.json', '', function(){console.log('done')})
 });
 
-var listener = app.listen(app.get('port'), function() {
-  console.log( 'Express server started on port: '+listener.address().port );
-});
+// var listener = app.listen(app.get('port'), function() {
+//   console.log( 'Express server started on port: '+listener.address().port );
+// });
