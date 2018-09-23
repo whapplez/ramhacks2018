@@ -2,7 +2,7 @@ import nltk, re, pprint
 from dateutil import parser
 import datetime
 from nltk import word_tokenize
-
+import sys
 
 def main(org, post_date, raw, file=False):
     if file:
@@ -118,4 +118,4 @@ def main(org, post_date, raw, file=False):
 
 
 if __name__ == "__main__":
-    main('who?', 'Sat Sep 15 16:12:25 +0000 2018', 'text2.txt', file=True)
+    main(sys.argv[1], sys.argv[2], sys.argv[3])
