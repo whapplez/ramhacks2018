@@ -8,7 +8,6 @@ const con_key = "PLpOT57q5n8BwYrpm8u8Z9ROf";
 const con_secret = "EI0azViZNaqWjXBaSdLNKz89ohtkP9vP9FgddKoXBMuDS5VdGK";
 var bear2 = "UExwT1Q1N3E1bjhCd1lycG04dThaOVJPZjpFSTBhelZpWk5hcVdqWEJhU2RMTkt6ODlvaHRrUDl2UDlGZ2RkS29YQk11RFM1VmRHSw==";
 var tweetarry = [];
-var accarray = ["uvadining", "uvaesc", ];
 var client = new Twitter({
 	consumer_key: con_key,
 	consumer_secret: con_secret,
@@ -16,15 +15,10 @@ var client = new Twitter({
 });
 
 app.set('port', process.env.PORT || 8080 );
+var spawn = require('child_process').spawn;
 
 app.get('/', function(req, res){
-    var spawn = require('child_process').spawn;
-	var py = spawn('python', ['compute_input.py', req.query.firstName, req.query.lastName]);
-
-	py.stdout.on('data', function(data) { 
-    	res.send(data.toString()); 
-	}) ;
-
+	res.send("hello world")
 });
 
 var arry2 = new Promise(function(resolve, reject){
@@ -49,6 +43,13 @@ var arry2 = new Promise(function(resolve, reject){
 
 arry2.then(function(fulfilled){
 	//console.log(fulfilled)
+	for(var i = 0; i < fulfilled.length; i++){
+		//console.log(fulfilled[i])
+		var py = spawn('python', ['nlp.py', fulfilled[i].name, fulfilled[i].date, fulfilled[i].text]);
+		py.stdout.on('data', function(data) { 
+	    	console.log(data.toString("utf-8"))
+		}) ;
+	}
 });
 
 var listener = app.listen(app.get('port'), function() {
