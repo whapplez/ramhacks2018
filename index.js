@@ -3,11 +3,18 @@ const app = express();
 const Twitter = require('twitter');
 const request = require('request');
 const http = require('http');
+const fs = require('fs');
+var Promise = require('q').Promise;
+var googleMapsClient = require('@google/maps').createClient({
+	key: 'AIzaSyAdqtBqtj9NyGSC6WzanuE27pUOGVxT89c',
+	Promise: Promise
+});
 
 const con_key = "PLpOT57q5n8BwYrpm8u8Z9ROf";
 const con_secret = "EI0azViZNaqWjXBaSdLNKz89ohtkP9vP9FgddKoXBMuDS5VdGK";
 var bear2 = "UExwT1Q1N3E1bjhCd1lycG04dThaOVJPZjpFSTBhelZpWk5hcVdqWEJhU2RMTkt6ODlvaHRrUDl2UDlGZ2RkS29YQk11RFM1VmRHSw==";
 var tweetarry = [];
+var locArray = [];
 var client = new Twitter({
 	consumer_key: con_key,
 	consumer_secret: con_secret,
@@ -47,8 +54,23 @@ arry2.then(function(fulfilled){
 		//console.log(fulfilled[i])
 		var py = spawn('python', ['nlp.py', fulfilled[i].name, fulfilled[i].date, fulfilled[i].text]);
 		py.stdout.on('data', function(data) { 
-	    	console.log(data.toString("utf-8"))
-		}) ;
+	    	var xd = (data.toString("utf-8").split("\n"))
+	    	if(xd.length == 6){
+	    		var location = xd[4].slice(11);
+	    		googleMapsClient.places({
+	    			query: location,
+	    			language: 'en',
+	    			location: [38.0336, 78.5080],
+	    			radius: 1000
+	    		}).asPromise().then(function(response){
+	    			if(response.json.results.length > 0){
+	    				xd[4] = (response.json.results[0].geometry.location)
+	    				locArray.push(xd);
+	    				console.log(locArray)
+	    			}
+	    		});
+	    	}
+		});
 	}
 });
 
