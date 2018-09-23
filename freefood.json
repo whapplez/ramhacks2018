@@ -1,0 +1,76 @@
+{"index":{"_index":"freefood","_id":0}}
+{"location":"O-Hill","date":9232018,"time":1130,"food":"ice cream","organization":"CSA","geopoint":"38.034767000, -78.515039000"}
+{"index":{"_index":"freefood","_id":1}}
+{"location":"New Cabell","date":10262018,"time":1130,"food":"pizza","organization":"YSA","geopoint":"38.032568000, -78.505233000"}
+{"index":{"_index":"freefood","_id":2}}
+{"location":"Rice","date":10262018,"time":1230,"food":"hamburger","organization":"VSA", "geopoint":"38.031781000, -78.510931000"}
+{"index":{"_index":"freefood","_id":3}}
+{"location":"Newcomb","date":10132018,"time":1730,"food":"sandwiches","organization":"Singers","geopoint":"38.035771000, -78.506658000"}
+{"index":{"_index":"freefood","_id":4}}
+{"location":"Newcomb","date":10032018,"time":1830,"food":"ice cream","organization":"CSA","geopoint":"38.035771000, -78.506658000"}
+{"index":{"_index":"freefood","_id":5}}
+{"location":"Rotunda","date":10132018,"time":830,"food":"sandwiches","organization":"VSA","geopoint":"38.035701000, -78.503383000"}
+{"index":{"_index":"freefood","_id":6}}
+{"location":"Rice","date":10282018,"time":1230,"food":"BBQ","organization":"KSA","geopoint":"38.031781000, -78.510931000"}
+{"index":{"_index":"freefood","_id":7}}
+{"location":"O-Hill","date":10312018,"time":1730,"food":"Chipotle","organization":"MLC","geopoint":"38.034767000, -78.515039000"}
+{"index":{"_index":"freefood","_id":8}}
+{"location":"Runk","date":10312018,"time":2030,"food":"sandwiches","organization":"CNS","geopoint":"38.028910000, -78.518696000"}
+{"index":{"_index":"freefood","_id":9}}
+{"location":"Runk","date":10312018,"time":1900,"food":"pizza","organization":"MLC","geopoint":"38.028910000, -78.518696000"}
+{"index":{"_index":"freefood","_id":10}}
+{"location":"Old Cabell","date":11262018,"time":1800,"food":"hotdogs","organization":"Rifle team","geopoint":"38.032898000, -78.504847000"}
+{"index":{"_index":"freefood","_id":11}}
+{"location":"Newcomb","date":12132018,"time":1830,"food":"bodo's","organization":"VSST","geopoint":"38.035771000, -78.506658000"}
+{"index":{"_index":"freefood","_id":12}}
+{"location":"New Cabell","date":12082018,"time":1700,"food":"KFT","organization":"Club Swim","geopoint":"38.032568000, -78.505233000"}
+{"index":{"_index":"freefood","_id":13}}
+{"location":"The Lawn","date":12082018,"time":1800,"food":"Moe's","organization":"Club Tennis","geopoint":"38.034832000, -78.503822000"}
+{"index":{"_index":"freefood","_id":14}}
+{"location":"AFC","date":12132018,"time":1330,"food":"sandwiches","organization":"Club Basketball","geopoint":"38.032840000, -78.513511000"}
+{"index":{"_index":"freefood","_id":15}}
+{"location":"Scott Stadium","date":12252018,"time":1230,"food":"hamburgers","organization":"OYFA","geopoint":"38.031122000, -78.513704000"}
+{"index":{"_index":"freefood","_id":16}}
+{"location":"Newcomb","date":12182018,"time":1830,"food":"sundaes","organization":"OYFA","geopoint":"38.035771000, -78.506658000"}
+{"index":{"_index":"freefood","_id":17}}
+{"location":"Newcomb","date":11312018,"time":1930,"food":"Pies","organization":"CNS","geopoint":"38.035771000, -78.506658000"}
+{"index":{"_index":"freefood","_id":18}}
+{"location":"O-Hill","date":10162018,"time":1230,"food":"Tea","organization":"Echols Council","geopoint":"38.034767000, -78.515039000"}
+{"index":{"_index":"freefood","_id":19}}
+{"location":"O-Hill","date":9232018,"time":1230,"food":"ice cream","organization":"CSA","geopoint":"38.034767000, -78.515039000"}
+{"index":{"_index":"freefood","_id":20}}
+{"location":"New Cabell","date":10262018,"time":1130,"food":"pizza","organization":"Rodman Council","geopoint":"38.032568000, -78.505233000"}
+{"index":{"_index":"freefood","_id":21}}
+{"location":"Rice","date":10262018,"time":2130,"food":"hotdogs","organization":"VSA", "geopoint":"38.031781000, -78.510931000"}
+{"index":{"_index":"freefood","_id":22}}
+{"location":"Newcomb","date":11212018,"time":1830,"food":"bodo's","organization":"Singers","geopoint":"38.035771000, -78.506658000"}
+{"index":{"_index":"freefood","_id":23}}
+{"location":"Newcomb","date":10032018,"time":1830,"food":"cake","organization":"Club Swim","geopoint":"38.035771000, -78.506658000"}
+{"index":{"_index":"freefood","_id":24}}
+{"location":"Rotunda","date":10132018,"time":830,"food":"sandwiches","organization":"VSA","geopoint":"38.035701000, -78.503383000"}
+{"index":{"_index":"freefood","_id":25}}
+{"location":"Rice","date":10282018,"time":2130,"food":"dumplings","organization":"SEAS","geopoint":"38.031781000, -78.510931000"}
+{"index":{"_index":"freefood","_id":26}}
+{"location":"O-Hill","date":11302018,"time":1300,"food":"Chipotle","organization":"CAS","geopoint":"38.034767000, -78.515039000"}
+{"index":{"_index":"freefood","_id":27}}
+{"location":"Runk","date":10312018,"time":2030,"food":"sandwiches","organization":"CNS","geopoint":"38.028910000, -78.518696000"}
+{"index":{"_index":"freefood","_id":28}}
+{"location":"Runk","date":9302018,"time":1900,"food":"pizza","organization":"MLC","geopoint":"38.028910000, -78.518696000"}
+{"index":{"_index":"freefood","_id":29}}
+{"location":"Old Cabell","date":11262018,"time":1830,"food":"hotdogs","organization":"Rifle team","geopoint":"38.032898000, -78.504847000"}
+{"index":{"_index":"freefood","_id":30}}
+{"location":"Newcomb","date":12132018,"time":730,"food":"dumplings","organization":"OIFA","geopoint":"38.035771000, -78.506658000"}
+{"index":{"_index":"freefood","_id":31}}
+{"location":"New Cabell","date":12082018,"time":1700,"food":"KFT","organization":"Club Swim","geopoint":"38.032568000, -78.505233000"}
+{"index":{"_index":"freefood","_id":32}}
+{"location":"The Lawn","date":12082018,"time":2200,"food":"Moe's","organization":"Club Tennis","geopoint":"38.034832000, -78.503822000"}
+{"index":{"_index":"freefood","_id":33}}
+{"location":"AFC","date":12132018,"time":2130,"food":"subs","organization":"Club Basketball","geopoint":"38.032840000, -78.513511000"}
+{"index":{"_index":"freefood","_id":34}}
+{"location":"Scott Stadium","date":12252018,"time":1630,"food":"hamburgers","organization":"OYFA","geopoint":"38.031122000, -78.513704000"}
+{"index":{"_index":"freefood","_id":35}}
+{"location":"Newcomb","date":12152018,"time":1700,"food":"sundaes","organization":"OYFA","geopoint":"38.035771000, -78.506658000"}
+{"index":{"_index":"freefood","_id":36}}
+{"location":"Newcomb","date":10152018,"time":1430,"food":"Pies","organization":"CNS","geopoint":"38.035771000, -78.506658000"}
+{"index":{"_index":"freefood","_id":37}}
+{"location":"O-Hill","date":10262018,"time":1530,"food":"Cookies","organization":"Echols Council","geopoint":"38.034767000, -78.515039000"}
